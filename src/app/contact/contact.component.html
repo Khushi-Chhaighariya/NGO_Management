@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mission Warrelief</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" >
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" >
+        <link href="lib/flaticon/font/flaticon.css" >
+        <link href="lib/animate/animate.min.css" >
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" >
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" >
+    </head>
+    <body>
+       
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="col-12">
+                      
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Get In Touch</p>
+                    <h2>Contact for any query</h2>
+                </div>
+                <div class="contact-img">
+                    <img src="./assets/img/18.jp.jpeg" alt="Image">
+                </div>
+                <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate" [formGroup]="queryReg" (ngSubmit)="queryRegister()">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="fullname" name="fullname"
+                                formControlName="fullname"  placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                <span *ngIf="queryReg.controls['fullname'].touched && !queryReg.controls['fullname'].valid" >
+                                    <span *ngIf="queryReg.controls['fullname'].hasError('required')">
+                                        Fullname is required !
+                                    </span>
+                                    <span *ngIf="queryReg.controls['fullname'].hasError('minlength')">
+                                     Fullname should be minimum 3 characters !
+                                    </span>
+                                    <span *ngIf="queryReg.controls['fullname'].hasError('maxlength')">
+                                      Fullname should be maximum 30 characters !
+                                    </span>
+                         </span>   
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="contact" name="contact"
+                                formControlName="contact"  placeholder="Your Contact" required="required" aria-placeholder="Please enter your Contact" />
+                                <span *ngIf="queryReg.controls['contact'].touched && !queryReg.controls['contact'].valid" >
+                                    <span *ngIf="queryReg.controls['contact'].hasError('required')">
+                                          Contact is required !
+                                    </span>
+                                    <span *ngIf="queryReg.controls['contact'].hasError('minlength')">
+                                     Invalid Contact.!
+                                    </span>
+                                    <span *ngIf="queryReg.controls['contact'].hasError('maxlength')">
+                                      Invalid Contact.!
+                                    </span>
+                         </span>  
+                            </div>
+                            <div class="control-group">
+                                <input type="text" 
+                                class="form-control" 
+                                id="subject"
+                                 name="subject"
+                                formControlName="subject" 
+                                placeholder="Subject" 
+                                 />
+                                 <span *ngIf="queryReg.controls['subject'].touched && !queryReg.controls['subject'].valid" >
+                                    <span *ngIf="queryReg.controls['subject'].hasError('required')">
+                                        Subject is required !
+                                    </span>
+                                    <span *ngIf="queryReg.controls['subject'].hasError('minlength')">
+                                        Subject is minimum  3 characters !
+                                    </span>
+                                    <span *ngIf="queryReg.controls['subject'].hasError('maxlength')">
+                                      Subject should be maximum 30 characters !
+                                    </span>
+                         </span>  
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" 
+                                id="message"
+                                 name="message"
+                                formControlName="message" 
+                                placeholder="Message" 
+                               aria-placeholder="Please enter your message"></textarea>
+                               <span *ngIf="queryReg.controls['message'].touched && !queryReg.controls['message'].valid" >
+                                <span *ngIf="queryReg.controls['message'].hasError('required')">
+                                    Message is required !
+                                </span>
+                                <span *ngIf="queryReg.controls['message'].hasError('minlength')">
+                                    Message is minimum  3 characters !
+                                </span>
+                                <span *ngIf="queryReg.controls['message'].hasError('maxlength')">
+                                  Message should be maximum 30 characters !
+                                </span>
+                     </span>  
+                            </div>
+                            <div>
+                                <button class="btn btn-custom" type="submit" >Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+        
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>123 Street, New Delhi, India</p>
+                            <p><i class="fa fa-phone-alt"></i>1800-3999-3999</p>
+                            <p><i class="fa fa-envelope"></i>info@missionwarrelief.com</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="about">About Us</a>
+                            <a href="contact">Contact Us</a>
+                            <a href="memberlogin">Member Login</a>
+                            <a href="/volunteer">Volunteer</a>
+                            <a href="/donor">Donor</a>
+                            <a href="adminlogin">Admin Login</a>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+          
+        </div>
+        <!-- Footer End -->
+
+       
+       
+
+       
+    </body>
+</html>
+    

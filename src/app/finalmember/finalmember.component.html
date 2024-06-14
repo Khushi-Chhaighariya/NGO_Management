@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="row align-items-center">
+        <div class="row">
+            <div class="section-header text-center">
+                <p>Request Page</p>
+                <p>Request Page</p>
+                
+                <h2>Approve Request</h2>
+            </div>
+            <div class="col-lg-5">
+              <div class="donate-form">
+              
+                  <form [formGroup]="memberReg" (ngSubmit)="memberRegister()">
+                      <div class="control-group">
+                          <input type="text"
+                           class="form-control" 
+                           id="fullname" name="fullname"
+                           formControlName="fullname" 
+                           placeholder="Full Name" 
+                            />
+                             <span *ngIf="memberReg.controls['fullname'].touched && !memberReg.controls['fullname'].valid" >
+                      <span *ngIf="memberReg.controls['fullname'].hasError('required')">
+                            Member name is required !
+                      </span>
+                      <span *ngIf="memberReg.controls['fullname'].hasError('minlength')">
+                        Member name should be minimum 4 characters !
+                      </span>
+                      <span *ngIf="memberReg.controls['fullname'].hasError('maxlength')">
+                        Member name should be maximum 30 characters !
+                      </span>
+           </span>    
+                      </div>
+                      
+                      <div class="control-group">
+                          <input type="text" 
+                          class="form-control" 
+                          id="contact" name="contact" 
+                          formControlName="contact" 
+                          placeholder="Contact" >
+                          <span *ngIf="memberReg.controls['contact'].touched && !memberReg.controls['contact'].valid" >
+                              <span *ngIf="memberReg.controls['contact'].hasError('required')">
+                                    Member contact is required !
+                              </span>
+                              <span *ngIf="memberReg.controls['contact'].hasError('minlength')">
+                                Member contact should be minimum 10 characters !
+                              </span>
+                              <span *ngIf="memberReg.controls['contact'].hasError('maxlength')">
+                                Member contact should be maximum 10 characters !
+                              </span>
+                   </span>    
+                      </div>
+                      <div class="control-group">
+                          <input type="text" class="form-control" id="address" name="address" formControlName="address" placeholder="Address"  />
+                          <span *ngIf="memberReg.controls['address'].touched && !memberReg.controls['address'].valid" >
+                              <span *ngIf="memberReg.controls['address'].hasError('required')">
+                                    Member address is required !
+                              </span>
+                              <span *ngIf="memberReg.controls['address'].hasError('minlength')">
+                                Member address should be minimum 4 characters !
+                              </span>
+                              <span *ngIf="memberReg.controls['address'].hasError('maxlength')">
+                                Member address should be maximum 20 characters !
+                              </span>
+                   </span>    
+                      </div>
+                      <div class="control-group">
+                          <input type="text" class="form-control" id="employement" name="employement" formControlName="employement" placeholder="Employment" />
+                          <span *ngIf="memberReg.controls['employement'].touched && !memberReg.controls['employement'].valid" >
+                              <span *ngIf="memberReg.controls['employement'].hasError('required')">
+                                    Member Employment is required !
+                              </span>
+                              <span *ngIf="memberReg.controls['employement'].hasError('minlength')">
+                                Member Employment should be minimum 4 characters !
+                              </span>
+                              <span *ngIf="memberReg.controls['employement'].hasError('maxlength')">
+                                Member Employment should be maximum 30 characters !
+                              </span>
+                   </span>    
+                      </div>
+                      <div class="control-group">
+                          <input type="text" class="form-control" id="reason" name="reason" formControlName="reason" placeholder="Reasons" />
+                          <span *ngIf="memberReg.controls['reason'].touched && !memberReg.controls['reason'].valid" >
+                              <span *ngIf="memberReg.controls['reason'].hasError('required')">
+                                    Member reason is required !
+                              </span>
+                              <span *ngIf="memberReg.controls['reason'].hasError('minlength')">
+                                Member reason should be minimum 5 characters !
+                              </span>
+                              <span *ngIf="memberReg.controls['reason'].hasError('maxlength')">
+                                Member reason should be maximum 30 characters !
+                              </span>
+                   </span>   
+                      </div>
+                      <div>
+                          <button class="btn btn-custom" type="submit">Member Now</button>
+                      </div>
+                  </form>
+                  <router-outlet></router-outlet>
+              </div>
+          </div>
+            </div>
+        </div>
+    </div>
+
+

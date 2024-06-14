@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mission WarRelief</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+         <!-- Favicon -->
+         <link href="img/favicon.ico" rel="icon">
+
+         <!-- Google Font -->
+         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" >
+         
+         <!-- CSS Libraries -->
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" >
+         <link href="lib/flaticon/font/flaticon.css" >
+         <link href="lib/animate/animate.min.css" >
+         <link href="lib/owlcarousel/assets/owl.carousel.min.css" >
+ 
+         <!-- Template Stylesheet -->
+         <link href="css/style.css" >
+        <link href="/src/assets/img/favicon.ico" rel="icon" />
+    
+            <!-- Google Font -->
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"  />
+            
+            <!-- CSS Libraries -->
+            
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"  />
+          
+            <!-- Template Stylesheet -->
+            <link href="./src/assets/css/style.css" />
+        <script src="./src/assets/js/main.js"></script>
+    </head>
+    <body>
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>1800-3999-3999</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>info@missionwarrelief.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+      
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Become a Member</h2>
+                    </div>
+                    <div class="col-12">
+                       
+                        <a href="">Member</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End 
+       
+        
+        <img src="./assets/img/15.png" alt="Team Image" height="400px" width="100%">
+        <!-- Member Start -->
+        <div class="container">
+            <div class="donate" data-parallax="scroll" data-image-src="./assets/img/war6.jpg">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="donate-content">
+                            <div class="section-header">
+                                <p>Member Now</p>
+                                <h2>Let's Member to needy people for better lives</h2>
+                            </div>
+                            <div class="donate-text">
+                                <p>it's not how much we given, but how much love we into giving</p>
+                                <p>Mother Teresa<p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="donate-form">
+                        
+                            <form [formGroup]="memberReg" (ngSubmit)="memberRegister()">
+                                <div class="control-group">
+                                    <input type="text"
+                                     class="form-control" 
+                                     id="fullname" name="fullname"
+                                     formControlName="fullname" 
+                                     placeholder="Full Name" 
+                                      />
+                                       <span *ngIf="memberReg.controls['fullname'].touched && !memberReg.controls['fullname'].valid" >
+                                <span *ngIf="memberReg.controls['fullname'].hasError('required')">
+                                      Member name is required !
+                                </span>
+                                <span *ngIf="memberReg.controls['fullname'].hasError('minlength')">
+                                  Member name should be minimum 4 characters !
+                                </span>
+                                <span *ngIf="memberReg.controls['fullname'].hasError('maxlength')">
+                                  Member name should be maximum 30 characters !
+                                </span>
+                     </span>    
+                                </div>
+                                
+                                <div class="control-group">
+                                    <input type="text" 
+                                    class="form-control" 
+                                    id="contact" name="contact" 
+                                    formControlName="contact" 
+                                    placeholder="Contact" >
+                                    <span *ngIf="memberReg.controls['contact'].touched && !memberReg.controls['contact'].valid" >
+                                        <span *ngIf="memberReg.controls['contact'].hasError('required')">
+                                              Member contact is required !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['contact'].hasError('minlength')">
+                                          Member contact should be minimum 10 characters !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['contact'].hasError('maxlength')">
+                                          Member contact should be maximum 10 characters !
+                                        </span>
+                             </span>    
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" id="address" name="address" formControlName="address" placeholder="Address"  />
+                                    <span *ngIf="memberReg.controls['address'].touched && !memberReg.controls['address'].valid" >
+                                        <span *ngIf="memberReg.controls['address'].hasError('required')">
+                                              Member address is required !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['address'].hasError('minlength')">
+                                          Member address should be minimum 4 characters !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['address'].hasError('maxlength')">
+                                          Member address should be maximum 20 characters !
+                                        </span>
+                             </span>    
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" id="employement" name="employement" formControlName="employement" placeholder="Employment" />
+                                    <span *ngIf="memberReg.controls['employement'].touched && !memberReg.controls['employement'].valid" >
+                                        <span *ngIf="memberReg.controls['employement'].hasError('required')">
+                                              Member Employment is required !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['employement'].hasError('minlength')">
+                                          Member Employment should be minimum 4 characters !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['employement'].hasError('maxlength')">
+                                          Member Employment should be maximum 30 characters !
+                                        </span>
+                             </span>    
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" id="reason" name="reason" formControlName="reason" placeholder="Reasons" />
+                                    <span *ngIf="memberReg.controls['reason'].touched && !memberReg.controls['reason'].valid" >
+                                        <span *ngIf="memberReg.controls['reason'].hasError('required')">
+                                              Member reason is required !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['reason'].hasError('minlength')">
+                                          Member reason should be minimum 5 characters !
+                                        </span>
+                                        <span *ngIf="memberReg.controls['reason'].hasError('maxlength')">
+                                          Member reason should be maximum 30 characters !
+                                        </span>
+                             </span>   
+                                </div>
+                                <div>
+                                    <button class="btn btn-custom" type="submit">Member Now</button>
+                                </div>
+                                <div class="text-center">
+                                    <a href="memberlogin">Member Login</a>
+                                </div>
+                                
+                            </form>
+                            <router-outlet></router-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Member End -->
+ 
+         <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>123 Street,New Delhi, India</p>
+                            <p><i class="fa fa-phone-alt"></i>1800-3999-3999</p>
+                            <p><i class="fa fa-envelope"></i>info@missionwarrelief.com</p>
+                        
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="about">About Us</a>
+                            <a href="contact">Contact Us</a>
+                            <a href="memberlogin">Member Login</a>
+                            <a href="/volunteer">Volunteer</a>
+                            <a href="/donor">Donor</a>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+          
+        </div>
+        <!-- Footer End -->
+
+     
+    </body>
+</html>
+    

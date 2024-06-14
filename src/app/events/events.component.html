@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mission WarRelief</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" >
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" >
+        <link href="lib/flaticon/font/flaticon.css" >
+        <link href="lib/animate/animate.min.css" >
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" >
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" >
+    </head>
+
+    <body>
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Upcoming Events</h2>
+                    </div>
+                    <div class="col-12">
+                      
+                        <a href="">Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Get In Touch</p>
+                    <h2>Contact for any query</h2>
+                </div>
+                <div class="contact-img">
+                    <img src="./assets/img/18.jp.jpeg" alt="Image">
+                </div>
+                <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate" [formGroup]="queryReg" (ngSubmit)="queryRegister()">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="fulname" name="fulname"
+                                formControlName="fulname" readonly="readonly" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="con" name="con"
+                                formControlName="con" readonly="readonly" placeholder="Your Email" required="required" aria-placeholder="Please enter your Contact" />
+                                
+                            </div>
+                            <div class="control-group">
+                                <input type="text" 
+                                class="form-control" 
+                                id="subject"
+                                 name="subject"
+                                formControlName="subject" 
+                                placeholder="Subject" 
+                                 />
+                                
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" 
+                                id="message"
+                                 name="message"
+                                formControlName="message" 
+                                placeholder="Message" 
+                               aria-placeholder="Please enter your message"></textarea>
+                                
+                            </div>
+                            <div>
+                                <button class="btn btn-custom" type="submit" >Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+        
+        <!-- Page Header End -->
+        <div class="event">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Upcoming Events</p>
+                    <h2>Be ready for our upcoming charity events</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="./assets/img/ur5.jpeg"  height="260px">
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>01-Nov-2022</p>
+                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>New Delhi</p>
+                                </div>
+                                <div class="event-text">
+                                    <h3>Helping Hand</h3>
+                                    <p>Upcommig event on New Delhi.At Helping Hand we welcome and celebrate all people, and deliver personalised and professional services to meet the needs of older people from all backgrounds. 
+                                        Our core values of compassion, respect, excellence and community show in everything we do.
+                                        </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="./assets/img/ur7.jpg"  alt="Image" height="250px">
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>05-Nov-2022</p>
+                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>Mumbai</p>
+                                </div>
+                                <div class="event-text">
+                                    <h3>Amrit Mahotsav</h3>
+                                    <p>
+                                        This Mahotsav is dedicated to the people of India who have not only been instrumental in bringing India thus far in its evolutionary journey but also hold within them the power and potential to enable Prime Minister Narendra Modi's
+                                         vision of activating India 2.0, fuelled by the spirit of Aatmanirbhar Bharat.
+                                    
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Upcoming Events</h2>
+                    </div>
+                    <div class="col-12">
+                      
+                        <a href="">Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        <div class="event">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Events</p>
+                    <h2>Be ready for events</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="./assets/img/55.gif" alt="Image" height="250px">
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>22-July-2022</p>
+                                    <p><i class="far fa-clock"></i>10:00 - 12:00</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>New Delhi</p>
+                                </div>
+                                <div class="event-text">
+                                    <h3>Future To Save</h3>
+                                    <p>Interaction with Shri S S Kohli, Chairman Punjab National Bank and presentation of cheque at his office in New Delhi – July 2022</p>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="./assets/img/56.gif" alt="Image" height="250px">
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>22-Aug-2022</p>
+                                    <p><i class="far fa-clock"></i>01:00 - 03:00</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>Mumbai</p>
+                                </div>
+                                <div class="event-text">
+                                    <h3>Save Function</h3>
+                                    <p>
+                                        Expedition to Marsimik La in Ladakh, the worlid’s highest motorable road by 100% disabled Cadet Navin Gulia ( assistance from Indian Army, IOC and Tata Motors) – Auguest 2022
+                                    </p>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+      
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>123 Street, New Delhi, India</p>
+                            <p><i class="fa fa-phone-alt"></i>1800-3999-3999</p>
+                          
+                            <p><i class="fa fa-envelope"></i>info@missionwarrelief.com</p>
+                          <!--    <div class="footer-social">
+                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            <a href="">Popular Causes</a>
+                            <a href="">Upcoming Events</a>
+                            <a href="">Latest Blog</a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>-->
+                    </div>
+                   <!-- <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <form>
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn btn-custom">Submit</button>
+                                <label>Don't worry, we don't spam!</label>
+                            </form>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">Your Site Name</a>-Mission WarRelief</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">Khushi Chhaighariya</a></p>
+                    </div>
+                </div>
+            </div>
+      
+        <!-- Footer End -->
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+       
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+         <!-- Template Javascript -->
+        <script type="text/javascript" src="js/main.js"></script>
+        
+    </body>
+</html>
+    

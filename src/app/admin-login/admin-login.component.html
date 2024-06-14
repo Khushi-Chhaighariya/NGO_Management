@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mission Warrelief</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" >
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" >
+        <link href="lib/flaticon/font/flaticon.css" >
+        <link href="lib/animate/animate.min.css" >
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" >
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" >
+    </head>
+
+    <body>
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>1800-3999-3999</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>info@missionwarrelief.com</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    </div>
+                </div>
+            </div>
+
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+       
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Admin Login</h2>
+                    </div>
+                    <div class="col-12">
+                        
+                        <a href="">Admin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Admin Start -->
+             <div class="container">
+            <div class="volunteer" data-parallax="scroll" data-image-src="./assets/img/50.jpg">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="volunteer-form">
+                         <form [formGroup]="loginForm"(ngSubmit)="loginCheck()">
+                           
+                                <div class="control-group">
+                                    <input type="text"   class="form-control" formControlName="admin_email" name="admin_email" id="admin_email" placeholder="Admin Email" required="required" />
+                                    <span *ngIf="loginForm.controls['admin_email'].touched && !loginForm.controls['admin_email'].valid" >
+                                        <span *ngIf="loginForm.controls['admin_email'].hasError('required')">
+                                              Admin EMail is required !
+                                        </span>
+                                        <span *ngIf="loginForm.controls['admin_email'].hasError('minlength')">
+                                          Admin EMail Invalid !
+                                        </span>
+                                        <span *ngIf="loginForm.controls['cadmin_emaility'].hasError('maxlength')">
+                                            Admin EMail Invalid !
+                                        </span>
+                             </span> 
+                                
+                                </div>
+                              
+                    
+              
+                                <div class="control-group">
+                                    <input type="password"  class="form-control" formControlName="admin_password" name="admin_password" id="admin_password" placeholder="Admin Password"  />
+                                    <span *ngIf="loginForm.controls['admin_password'].touched && !loginForm.controls['admin_password'].valid" >
+                                        <span *ngIf="loginForm.controls['admin_password'].hasError('required')">
+                                              Admin Password is required !
+                                        </span>
+                                        <span *ngIf="loginForm.controls['admin_password'].hasError('minlength')">
+                                          Admin Password should be minimum 4 characters !
+                                        </span>
+                                        <span *ngIf="loginForm.controls['admin_password'].hasError('maxlength')">
+                                            Admin Password should be maximum 10 characters !
+                                        </span>
+                             </span> 
+                                </div>
+                                
+                                <div>
+                                    <button class="btn btn-custom" type="submit">Admin Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="volunteer-content">
+                            <div class="section-header">
+                                <p></p>
+                                <h2>Let’s make a difference in the lives of others</h2>
+                            </div>
+                            <div class="volunteer-text">
+                                <p>Volunteering can be provided through the Voluntary organisations and NGO in different sectors on different issues. Volunteering can be provided with the organisations already working in the area of your interest or the Volunteers can form their own Voluntary organisation, group or forum.
+                                     </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Admin End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>123 Street,  New Delhi, India</p>
+                            <p><i class="fa fa-phone-alt"></i>1800-3999-3999</p>
+                            <p><i class="fa fa-envelope"></i>info@missionwarrelief.com</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="about">About Us</a>
+                            <a href="contact">Contact Us</a>
+                            <a href="memberlogin">Member Login</a>
+                            <a href="/volunteer">Volunteer</a>
+                            <a href="/donor">Donor</a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">Your Site Name</a>-Mission WarRelief</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+         <!-- Template Javascript -->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
+    

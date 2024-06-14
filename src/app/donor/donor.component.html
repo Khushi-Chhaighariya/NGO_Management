@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mission WarRelief</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+         <!-- Favicon -->
+         <link href="img/favicon.ico" rel="icon">
+
+         <!-- Google Font -->
+         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" >
+         
+         <!-- CSS Libraries -->
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" >
+         <link href="lib/flaticon/font/flaticon.css" >
+         <link href="lib/animate/animate.min.css" >
+         <link href="lib/owlcarousel/assets/owl.carousel.min.css" >
+ 
+         <!-- Template Stylesheet -->
+         <link href="css/style.css" >
+        <link href="/src/assets/img/favicon.ico" rel="icon" />
+    
+            <!-- Google Font -->
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"  />
+            
+            <!-- CSS Libraries -->
+            
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"  />
+          
+            <!-- Template Stylesheet -->
+            <link href="./src/assets/css/style.css" />
+        <script src="./src/assets/js/main.js"></script>
+    </head>
+
+    <body>
+       
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Donations</h2>
+                    </div>
+                    <div class="col-12">
+                      
+                        <a href="">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-image"></div>
+
+       
+        
+
+        
+            <div class="section-header text-center">
+                
+            </div>
+
+           <!-- Donate Start -->
+        <div class="container">
+            <div class="donate" data-parallax="scroll" data-image-src="./assets/img/donate.jpg">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="donate-content">
+                            <div class="section-header">
+                                <p>Donate Now</p>
+                                <h2>Let's donate to needy people for better lives</h2>
+                            </div>
+                            <div class="donate-text">
+                                <p>
+                                   Money is not the only commodity that is fun to give. We can give time, we can give our expertise, we can give our love, or simply give a smile. What does that cost? The point is, none of us can ever run out of something worthwhile to give.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="donate-form">
+                        <form [formGroup]="donorReg" (ngSubmit)="donorRegister()">
+                     
+                            
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="fullname" id="fullname" formControlName="fullname" placeholder="Full Name" />
+                                    <span *ngIf="donorReg.controls['fullname'].touched && !donorReg.controls['fullname'].valid" >
+                                        <span *ngIf="donorReg.controls['fullname'].hasError('required')">
+                                              donor name is required !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['fullname'].hasError('minlength')">
+                                          donor name should be minimum 4 characters !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['fullname'].hasError('maxlength')">
+                                          donor name should be maximum 30 characters !
+                                        </span>
+                             </span> 
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="pancard" id="pancard" formControlName="pancard" placeholder="Pan Card"  />
+                                    <span *ngIf="donorReg.controls['pancard'].touched && !donorReg.controls['pancard'].valid" >
+                                        <span *ngIf="donorReg.controls['pancard'].hasError('required')">
+                                              Donor PAN Card is required !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['pancard'].hasError('minlength')">
+                                          Donor PAN Card should be minimum 10 characters !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['pancard'].hasError('maxlength')">
+                                            Donor  PAN Card  should be maximum 10 characters !
+                                        </span>
+                             </span> 
+                                </div>
+                                
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="address" id="address" formControlName="address" placeholder="Address"  />
+                                    <span *ngIf="donorReg.controls['address'].touched && !donorReg.controls['address'].valid" >
+                                        <span *ngIf="donorReg.controls['address'].hasError('required')">
+                                              Donor address is required !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['address'].hasError('minlength')">
+                                          Donor address should be minimum 4 characters !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['address'].hasError('maxlength')">
+                                            Donor address should be maximum 20 characters !
+                                        </span>
+                             </span> 
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="city" id="city" formControlName="city"  placeholder="City"  />
+                                    <span *ngIf="donorReg.controls['city'].touched && !donorReg.controls['city'].valid" >
+                                        <span *ngIf="donorReg.controls['city'].hasError('required')">
+                                              Donor city is required !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['city'].hasError('minlength')">
+                                          Donor city should be minimum 4 characters !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['city'].hasError('maxlength')">
+                                            Donor city should be maximum 10 characters !
+                                        </span>
+                             </span> 
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="state" id="state" formControlName="state"  placeholder="State" />
+                                    <span *ngIf="donorReg.controls['state'].touched && !donorReg.controls['state'].valid" >
+                                        <span *ngIf="donorReg.controls['state'].hasError('required')">
+                                              Donor state is required !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['state'].hasError('minlength')">
+                                          Donor state should be minimum 2 characters !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['state'].hasError('maxlength')">
+                                            Donor state should be maximum 20 characters !
+                                          
+                                           
+                                        </span>
+                             </span> 
+                                </div>
+                                <div class="control-group">
+                                    <input type="email" class="form-control" name="email" id="email" formControlName="email"  placeholder="Email" />
+                                    <span *ngIf="donorReg.controls['email'].touched && !donorReg.controls['email'].valid" >
+                                        <span *ngIf="donorReg.controls['email'].hasError('required')">
+                                            Required email !  
+                                        </span>
+                                        <span *ngIf="donorReg.controls['email'].hasError('minlength')">
+                                            Invalid email !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['email'].hasError('maxlength')">
+                                            Invalid email !
+                                          
+                                           
+                                        </span>
+                             </span> 
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="contact" id="contact" formControlName="contact" placeholder=" Phone Contact" 
+                                     />
+                                     <span *ngIf="donorReg.controls['contact'].touched && !donorReg.controls['contact'].valid" >
+                                        <span *ngIf="donorReg.controls['contact'].hasError('required')">
+                                            Donor contact is required !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['contact'].hasError('minlength')">
+                                            Invalid contact number!
+                                        </span>
+                                        <span *ngIf="donorReg.controls['contact'].hasError('maxlength')">
+                                            Invalid contact number!
+                                          
+                                           
+                                        </span>
+                             </span> 
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="amount" id="amount" formControlName="amount" placeholder=" Amount "  />
+                                    <span *ngIf="donorReg.controls['amount'].touched && !donorReg.controls['amount'].valid" >
+                                        <span *ngIf="donorReg.controls['amount'].hasError('required')">
+                                              Donor Amount is required !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['amount'].hasError('minlength')">
+                                          Donor state Amount be minimum 2 characters !
+                                        </span>
+                                        <span *ngIf="donorReg.controls['amount'].hasError('maxlength')">
+                                            Donor Amount should be maximum 20 characters !
+                                          
+                                           
+                                        </span>
+                             </span> 
+                                </div>
+                            
+                                <div>
+                                    <button class="btn btn-custom"  type="submit">Donate Now
+                                       
+                                    </button>
+                                  
+                                </div>
+                           
+                                  </form>
+                                                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>123 Street, New Delhi,India</p>
+                            <p><i class="fa fa-phone-alt"></i>1800-3999-3999</p>
+                            <p><i class="fa fa-envelope"></i>info@missionwarrelief.com</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="about">About Us</a>
+                            <a href="contact">Contact Us</a>
+                            <a href="memberlogin">donor Login</a>
+                            <a href="/volunteer">Volunteer</a>
+                            <a href="/donor">Donor</a>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+    
+        <!-- Footer End -->
+
+       
+    </body>
+</html>
+    

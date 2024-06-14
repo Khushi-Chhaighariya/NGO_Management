@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mission WarRelief</title>
+    <meta content="width=device-width, initial-scale=1.0" fullname="viewport">
+    <meta content="Free Website Template" fullname="keywords">
+    <meta content="Free Website Template" fullname="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <link href="lib/flaticon/font/flaticon.css">
+    <link href="lib/animate/animate.min.css">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <h2>Become A Volunteer</h2>
+                </div>
+                <div class="col-12">
+
+                    <a href="">Volunteer</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Volunteer Start -->
+    <div class="container">
+        <div class="volunteer" data-parallax="scroll" data-image-src="./assets/img/war17.jpg">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="volunteer-form">
+                        <form [formGroup]="volunteerReg" (ngSubmit)="volunteerRegister()">
+
+                            <div class="control-group">
+                                <input type="text" class="form-control" fullname="fullname" id="fullname" formControlName="fullname"
+                                    placeholder="Full Name" />
+                                <span
+                                    *ngIf="volunteerReg.controls['fullname'].touched && !volunteerReg.controls['fullname'].valid">
+                                    <span *ngIf="volunteerReg.controls['fullname'].hasError('required')">
+                                        Volunteer fullname is required !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['fullname'].hasError('minlength')">
+                                        Volunteer fullname should be minimum 4 characters !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['fullname'].hasError('maxlength')">
+                                        Volunteer fullname should be maximum 30 characters !
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" fullname="contact" id="contact" formControlName="contact"
+                                    placeholder="Contact Number" />
+                                <span
+                                    *ngIf="volunteerReg.controls['contact'].touched && !volunteerReg.controls['contact'].valid">
+                                    <span *ngIf="volunteerReg.controls['contact'].hasError('required')">
+                                        Volunteer contact is required !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['contact'].hasError('minlength')">
+                                        Volunteer contact should be minimum 10 characters !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['contact'].hasError('maxlength')">
+                                        Volunteer contact should be maximum 10 characters !
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="control-group">
+                                <input type="text" class="form-control" fullname="address" id="address" formControlName="address"
+                                    placeholder="Address" />
+                                <span
+                                    *ngIf="volunteerReg.controls['address'].touched && !volunteerReg.controls['address'].valid">
+                                    <span *ngIf="volunteerReg.controls['address'].hasError('required')">
+                                        Volunteer address is required !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['address'].hasError('minlength')">
+                                        Volunteer address should be minimum 5 characters !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['address'].hasError('maxlength')">
+                                        Volunteer address should be minimum 20 characters !
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" fullname="employement" id="employement" formControlName="employement"
+                                    placeholder="Employment" />
+                                <span
+                                    *ngIf="volunteerReg.controls['employement'].touched && !volunteerReg.controls['employement'].valid">
+                                    <span *ngIf="volunteerReg.controls['employement'].hasError('required')">
+                                        Volunteer Employment is required !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['employement'].hasError('minlength')">
+                                        Volunteer Employment should be minimum 4 characters !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['employement'].hasError('maxlength')">
+                                        Volunteer Employment should be minimum 20 characters !
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" fullname="reason" id="reason" formControlName="reason"
+                                    placeholder="Why you want to become a volunteer?"></textarea>
+                                <span
+                                    *ngIf="volunteerReg.controls['reason'].touched && !volunteerReg.controls['reason'].valid">
+                                    <span *ngIf="volunteerReg.controls['reason'].hasError('required')">
+                                        Volunteer reason is required !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['reason'].hasError('minlength')">
+                                        Volunteer reason should be minimum 5 characters !
+                                    </span>
+                                    <span *ngIf="volunteerReg.controls['reason'].hasError('maxlength')">
+                                        Volunteer reason should be minimum 20 characters !
+                                    </span>
+                                </span>
+                            </div>
+                            <div>
+                                <button routerLink="/payementpage"  class="btn btn-custom" type="submit">Become a volunteer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="volunteer-content">
+                        <div class="section-header">
+                            <p>Become A Volunteer</p>
+                            <h2>Let’s make a difference in the lives of others</h2>
+                        </div>
+                        <div class="volunteer-text">
+                            <p>Volunteering can be provided through the Voluntary organisations and NGO in different
+                                sectors on different issues. Volunteering can be provided with the organisations already
+                                working in the area of your interest or the Volunteers can form their own Voluntary
+                                organisation, group or forum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Volunteer End -->
+
+
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact">
+                        <h2>Our Head Office</h2>
+                        <p>123 Street, New Delhi, India</p>
+                        <p>1800-3999-3999</p>
+                        <p><i class="fa fa-envelope"></i>info@missionwarrelief.com</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Popular Links</h2>
+                        <a href="about">About Us</a>
+                        <a href="contact">Contact Us</a>
+                        <a href="memberlogin">Member Login</a>
+                        <a href="/volunteer">Volunteer</a>
+                        <a href="/donor">Donor</a>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer End -->
+
+    
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+
+<h1>Admin</h1>
+<div class="text-center">
+  <a href="viewmember">Member</a> | <a href="viewvolunteer">Volunteer</a> | <a href="viewdonor">Donor</a> | <a href="admin">Pending Request</a> | <a href="viewquery">Query</a>
+</div>
+<router-outlet></router-outlet>
+<h2>
+<h2 class="text-center">Member</h2>
+
+<div class="container">
+  
+    <table class="table">
+        <thead>
+          
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Message</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr *ngFor="let data of queryList">
+            <td >{{data.id}}</td>
+            <td >{{data.fullname}}</td>
+            <td>{{data.contact}}</td>
+            <td>{{data.subject}}</td>
+            <td> {{data.message}}</td>
+           
+        
+            <td > <a><i style="color:red;" (click)="deleteQuery(data.id)" class="fa fa-trash" aria-hidden="true"></i></a></td>
+          </tr>
+         
+        </tbody>
+      </table>
+    
+</div>
+</h2>
+
+
+
+
+
